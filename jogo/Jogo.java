@@ -38,13 +38,12 @@ public class Jogo extends Application{
   public void start(Stage primaryStage){
     window = primaryStage;
     //musica
-
-    /*
+    
     AudioClip musica = new AudioClip("file:jogo/musicas/musica");
     musica.setVolume(0.3);
     musica.play();
     musica.setCycleCount(AudioClip.INDEFINITE);
-  	*/
+
     //Imagem da sala
     imgSala = new ImageView(new Image ("file:jogo/" + engine.getRepVisual()));
     imgSala.setFitWidth(700);
@@ -56,14 +55,11 @@ public class Jogo extends Application{
     fundo.setFitWidth(900);
     fundo.setFitHeight(590);
 
-    /* Mutar
-    ImageView imageMutar = new ImageView("file:imagens/mutar");
+    //button Mutar
+    ImageView imageMutar = new ImageView("file:jogo/imagens/mutar");
     imageMutar.setFitWidth(20);
     imageMutar.setFitHeight(20);
-
-    */
     Button mutar = new Button();
-    /*
     mutar.setPadding(new Insets(15));
     mutar.setGraphic(imageMutar);
     mutar.setOnAction(e -> {
@@ -72,7 +68,6 @@ public class Jogo extends Application{
       else
         musica.play();
     });
-	*/
     // Texto caminhos
     Text textCaminhos = new Text("Perspectivas");
     //textCaminhos.setFont(Font.loadFont("file:fontes/Snacks.ttf", 30));

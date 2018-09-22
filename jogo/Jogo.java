@@ -1,3 +1,5 @@
+package jogo;
+
 import javafx.application.Application;
 import javafx.stage.*;
 import javafx.event.*;
@@ -11,6 +13,11 @@ import javafx.geometry.*;
 import java.util.*;
 import javafx.collections.*;
 import javafx.scene.text.*;
+import jogo.engine.*;
+import jogo.ferramentas.*;
+import jogo.objetos.*;
+import jogo.salas.*;
+import jogo.interfaceGrafica.*;
 
 public class Jogo extends Application{
 
@@ -144,7 +151,7 @@ public class Jogo extends Application{
     inventario.setItems(FXCollections.observableArrayList(engine.inventario()));
     inventario.setOnMouseClicked(e -> {
       if(inventario.getSelectionModel().getSelectedItem() != null)
-          Popup.display(engine.getFerramenta(inventario.getSelectionModel().getSelectedItem()));
+          PopupJogo.display(engine.getFerramenta(inventario.getSelectionModel().getSelectedItem()));
     });
 
     objetos.setOrientation(Orientation.HORIZONTAL);

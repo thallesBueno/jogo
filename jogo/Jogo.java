@@ -52,7 +52,7 @@ public class Jogo extends Application{
 
     //imagem de fundo
     ImageView fundo = new ImageView();
-    fundo.setImage(new Image("file:imagens/fundo"));
+    fundo.setImage(new Image("file:jogo/imagens/fundo"));
     fundo.setFitWidth(900);
     fundo.setFitHeight(590);
 
@@ -125,7 +125,7 @@ public class Jogo extends Application{
 
   public void entrar(String s){
     List<String> aux = engine.entrar(s);
-    imgSala.setImage(new Image ("file:" + engine.getRepVisual()));
+    imgSala.setImage(new Image ("file:jogo/" + engine.getRepVisual()));
     attListas();
     for(String f : aux)
       PopupPegar.display(f);
@@ -133,7 +133,7 @@ public class Jogo extends Application{
 
   public void usar(){
       PopupUsar.display(engine);
-      imgSala.setImage(new Image ("file:" + engine.getRepVisual()));
+      imgSala.setImage(new Image ("file:jogo/" + engine.getRepVisual()));
       attListas();
       if(engine.getVitoria()){
         PopupVitoria.display();
